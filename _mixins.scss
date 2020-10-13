@@ -1,0 +1,18 @@
+
+/* mixin for flexbox */
+@mixin flex ($direction, $main_axis, $cross_axis) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $main_axis;
+    align-items: $cross_axis;
+}
+
+/* mixin for border */
+@mixin border ($width, $color) {
+    border: $width solid $color;
+}
+
+/* mixin for shadow */
+@mixin shadow ($type, $x, $y, $blur, $color) {
+    #{$type}-shadow: $x $y $blur $color; 
+}

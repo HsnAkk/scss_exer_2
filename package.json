@@ -1,0 +1,15 @@
+{
+  "name": "exercise-2",
+  "version": "1.0.0",
+  "description": "> Let's use Bootstrap to create a restaurant page!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.2"
+  }
+}

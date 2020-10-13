@@ -1,0 +1,210 @@
+
+@import "./node_modules/bootstrap/scss/bootstrap";
+@import "./variables";
+@import "./mixins";
+
+body {
+    font-family: $body_font;
+    color: $pm_text_color;
+}
+h1, h3, h4, h5 {
+    color: $heading_color;
+}
+
+/* navbar */
+.navbar {
+    background: $main_dark;
+    font-family: $head_font;
+
+    .navbar-brand {
+        color: $primary_color;
+        margin: 0 10px;
+        img {
+            margin-right: 10px;
+        }
+    } 
+
+    .navbar-nav > .nav-item > .nav-link {
+        color: $primary_color;
+        padding: 0 20px;
+    }
+}
+
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 550px;
+    background-color: $main_dark;
+    background-image: url('./images/banner_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    @include flex(row, flex-start, center);
+
+    > div {
+        color: $main_light;
+        font-family: $head_font;
+        margin-left: 50px;
+
+        h1 {
+            font-size: $size_xlg;
+            color: $main_light;
+        }
+        p {
+            font-size: $size_text_lg;
+        }
+        button {
+            background: $primary-color;
+            color: $main_light;
+        }
+
+        @media screen and (max-width: 992px) {
+            h1 {
+                font-size: $size_lg;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            margin-left: 10px;
+            h1 {
+                font-size: $size_md;
+            }
+        }
+    }
+}
+
+
+/* cards */
+.sec-cards {
+    text-align: center;
+    padding: 50px 15px;
+
+    > h1 {
+        font: {
+            family: $head_font;
+            size: $size_sm;
+        }
+        margin-bottom: 40px;
+    }
+    > div > div {
+        @include flex(column, center, center);
+        
+        > div {
+            @include border(1px, black);
+            @include flex(row, center, center);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            img {
+                width: 45px;
+                height: 45px;
+            }
+        }
+        h4 {
+            font-family: $head_font;
+            margin: 15px 0;
+        }
+        p {
+            font-size: $size_link;
+            text-align: left;
+        }
+    }
+}
+
+.button_basics {
+    @include border(1px, $primary-color);
+    margin: 0 15px 20px;
+    padding: 10px 15px;
+    background: $main_light;
+    color: $primary-color;
+
+    &:hover {
+        color: $main_light;
+        background: $primary-color;
+    } 
+}
+
+
+/* News */
+.sec-news {
+    background: $primary_color;
+    text-align: center;
+
+    h1 {
+        color: $main_light;
+        font: {
+            family: $head_font;
+            size: $size_sm;
+        }
+        padding: 60px 0;
+    }
+    /* row*/
+    > div {
+        text-align: left;
+        flex-wrap: nowrap;
+        overflow: hidden;
+
+        /* news */
+        > div {
+            background: $main_light;
+            margin: 0 20px 60px;
+            padding: 0;
+            min-width: 320px;
+
+            img {
+                width: 100%;
+            }
+            h5 {
+                font-family: $head_font;
+                margin: 15px 0;
+                text-align: center;
+            }
+            p {
+                font-size: $size_link;
+                padding: 0 15px;
+            }
+            button {
+                @extend .button_basics;
+            }
+        }
+    }
+}
+
+
+/* Form - Contact */
+.sec-contact {
+    margin-bottom: 60px; 
+    h1 {
+        text-align: center;
+        font: {
+            family: $head_font;
+            size: $size_sm;
+        }
+        padding: 60px 0;
+    }
+
+    > div > div form {
+
+        > div {
+            margin-bottom: 30px;
+        }
+
+        button {
+            @extend .button_basics;
+            margin: 0 0 20px;
+            width: 100px;
+        }
+    }
+}
+
+
+/* footer */
+footer {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    background: $main_dark;
+    text-align: right;
+    color: $pm_text_color;
+    padding-right: 30px;
+}
